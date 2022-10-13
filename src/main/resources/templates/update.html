@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POKEDEX | UPDATE POKEMON</title>
+</head>
+<body>
+<form action="/update" method="post">
+  <input type="hidden" name="id" th:value="${pokemon.id}">
+  <div class="form-group">
+    <label>Name: <input type="text" name="name" class="form-control" th:value="${pokemon.name}"></label>
+  </div>
+  <div class="form-group">
+    <label>Speed: <input type="number" name="speed" class="form-control" th:value="${pokemon.speed}"></label>
+  </div>
+  <div class="form-group">
+    <label>Special Defence: <input type="number" name="specialDefence" class="form-control" th:value="${pokemon.specialDefence}"></label>
+  </div>
+  <div class="form-group">
+    <label>Special Attack: <input type="number" name="specialAttack" class="form-control" th:value="${pokemon.specialAttack}"></label>
+  </div>
+  <div class="form-group">
+    <label>Defence: <input type="number" name="defence" class="form-control" th:value="${pokemon.defence}"></label>
+  </div>
+  <div class="form-group">
+    <label>Attack: <input type="number" name="attack" class="form-control" th:value="${pokemon.attack}"></label>
+  </div>
+  <div class="form-group">
+    <label>HP: <input type="number" name="hp" class="form-control" th:value="${pokemon.hp}"></label>
+  </div>
+  <div class="form-group">
+    <select name="primaryType"th:value="${pokemon.primaryType}">
+      <option value="Bug">Bug</option>
+      <option value="Dragon">Dragon</option>
+      <option value="Electric">Electric</option>
+      <option value="Fairy">Fairy</option>
+      <option value="Fighting">Fighting</option>
+      <option value="Fire">Fire</option>
+      <option value="Ghost">Ghost</option>
+      <option value="Grass">Grass</option>
+      <option value="Ground">Ground</option>
+      <option value="Ice">Ice</option>
+      <option value="Normal">Normal</option>
+      <option value="Poison">Poison</option>
+      <option value="Psychic">Psychic</option>
+      <option value="Rock">Rock</option>
+      <option value="Water">Water</option>
+    </select>
+  </div>
+  <div class="form-group" th:value="${pokemon.secondaryType}">
+    <select name="secondaryType">
+      <option value="Fairy">Fairy</option>
+      <option value="Fighting">Fighting</option>
+      <option value="Flying">Flying</option>
+      <option value="Grass">Grass</option>
+      <option value="Ground">Ground</option>
+      <option value="Ice">Ice</option>
+      <option value="Poison">Poison</option>
+      <option value="Psychic">Psychic</option>
+      <option value="Rock">Rock</option>
+      <option value="Steel">Steel</option>
+      <option value="Water">Water</option>
+      <option value="null">None</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>POKEDEX | PRIMARY TYPES</title>
+</head>
+<body>
+<a th:href="@{/}"><h1>Return to Pokémon list</h1></a>
+<table>
+  <tr>
+    <th>Primary Type</th>
+    <th>Count</th>
+  </tr>
+  <tr th:each="primarytype:${primarytypes}">
+    <td th:text="${primarytype.getPrimaryType()}">Primary Type</td>
+    <td th:text="${primarytype.getCount()}">Count</td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>
