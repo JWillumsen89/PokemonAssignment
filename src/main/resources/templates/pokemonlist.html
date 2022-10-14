@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="font-family: 'Pokemon GB',serif">
+    <tr th:each="pokemon:${pokemons}">
+        <td><a href="pokemoninfo" th:href="'/pokemoninfo/' + ${pokemon.id}" target="iframeInfo"><p th:text="${pokemon.id}" style="font-weight: bold; color: black">Number</p></a></td>
+        <td></td>
+        <td><a href="pokemoninfo" th:href="'/pokemoninfo/' + ${pokemon.id}" target="iframeInfo"><p th:text="${pokemon.name}" style="font-weight: bold; color: black">Name</p></a></td>
+    </tr>
+</table>
+</body>
+</html>

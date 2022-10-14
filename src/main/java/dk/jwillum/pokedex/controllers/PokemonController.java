@@ -16,10 +16,20 @@ public class PokemonController {
     this.pokemonService = pokemonService;
   }
 
-  @GetMapping
-  public String getAllPokemons(Model model) {
+  @GetMapping("/pokemonlist")
+  public String getAllPokedex(Model model) {
     model.addAttribute("pokemons", pokemonService.getAllPokemons());
-    return "pokemons";
+    return "pokemonlist";
+  }
+  @GetMapping("/")
+  public String pokedex() {
+    return "pokedex";
+  }
+
+  @GetMapping("/pokemoninfo/{id}")
+  public String showInfo(@PathVariable("id")int id, Model model) {
+    model.addAttribute("pokemon", pokemonService.getById(id));
+    return "pokemoninfo";
   }
 
   @GetMapping("/primarytypes")
@@ -56,6 +66,8 @@ public class PokemonController {
     pokemonService.deletePokemon(id);
     return "redirect:/";
   }
+
+
 
 
 

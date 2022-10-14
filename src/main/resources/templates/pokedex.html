@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            height: 800px;
+            min-width: 1000px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-image: url('../img/pokedexOpen.png')
+        }
+
+        div.fixedRight {
+            position: fixed;
+            bottom: 17.8%;
+            left: 54.2%;
+            width: 295px;
+            border: none;
+            height: 339px;
+
+        }
+        div.fixedRightTop {
+            position: fixed;
+            bottom: 65%;
+            left: 54.2%;
+            width: 295px;
+            border: none;
+            height: 31px;
+
+        }
+
+        iframe.right {
+            position: fixed;
+            bottom: 17.8%;
+            left: 54.2%;
+            width: 295px;
+            border: none;
+            height: 339px;
+        }
+        div.fixedLeft {
+            position: fixed;
+            bottom: 23%;
+            right: 52.5%;
+            width: 328px;
+            border: solid green 2px;
+            height: 334px;
+
+        }
+
+        iframe.left {
+            position: fixed;
+            bottom: 23%;
+            right: 52.5%;
+            width: 328px;
+            border: solid green 2px;
+            height: 334px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr {
+            border-bottom: 1pt solid black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="center background">
+    <div class="fixedLeft">
+        <iframe class="left" name="iframeInfo"></iframe>
+    </div>
+    <div class="fixedRightTop">
+        <table style="font-family: 'Pokemon GB',serif; font-weight: bold">
+            <tr>
+                <td style="text-align: left">NO</td>
+                <td style="text-align: left">Name</td>
+            </tr>
+        </table>
+    </div>
+    <div class="fixedRight">
+        <iframe class="right" src="pokemonlist" th:src="@{pokemonlist}"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>

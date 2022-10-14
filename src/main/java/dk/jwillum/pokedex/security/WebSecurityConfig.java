@@ -1,4 +1,4 @@
-package dk.jwillum.pokedex.security;
+/*package dk.jwillum.pokedex.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,3 +27,5 @@ public class WebSecurityConfig {
   }
 }
 
+
+ */
